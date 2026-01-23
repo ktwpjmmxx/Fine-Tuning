@@ -1,0 +1,34 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Model Checkpoints & Outputs (Most Important!)
+# 学習中の巨大なモデルファイルは除外します
+outputs/
+*.pth
+*.pt
+*.bin
+*.safetensors
+adapter_model.bin
+adapter_config.json
+
+# Logs
+runs/
+wandb/
+*.log
+
+# Environment variables & Secrets
+.env
+.ipynb_checkpoints/
+
+# Virtual Environment
+venv/
+env/
+.venv/
+
+# IDE settings
+.vscode/
+.idea/
+
+# Mac system file
+.DS_Store
