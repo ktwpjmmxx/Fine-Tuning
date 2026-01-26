@@ -1,0 +1,142 @@
+新規トレーニングを開始します
+/content/drive/MyDrive/Elyza_FineTuning/unsloth_compiled_cache/UnslothSFTTrainer.py:859: UserWarning: You passed a `max_seq_length` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+/content/drive/MyDrive/Elyza_FineTuning/unsloth_compiled_cache/UnslothSFTTrainer.py:873: UserWarning: You passed a `dataset_num_proc` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+/content/drive/MyDrive/Elyza_FineTuning/unsloth_compiled_cache/UnslothSFTTrainer.py:897: UserWarning: You passed a `dataset_text_field` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+/content/drive/MyDrive/Elyza_FineTuning/unsloth_compiled_cache/UnslothSFTTrainer.py:992: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `UnslothSFTTrainer._unsloth___init__`. Use `processing_class` instead.
+  super().__init__(
+The model is already on multiple devices. Skipping the move to device specified in `args`.
+==((====))==  Unsloth - 2x faster free finetuning | Num GPUs used = 1
+   \\   /|    Num examples = 2,319 | Num Epochs = 3 | Total steps = 870
+O^O/ \_/ \    Batch size per device = 1 | Gradient accumulation steps = 8
+\        /    Data Parallel GPUs = 1 | Total batch size (1 x 8 x 1) = 8
+ "-____-"     Trainable parameters = 39,976,960 of 6,778,392,576 (0.59% trained)
+wandb: (1) Create a W&B account
+wandb: (2) Use an existing W&B account
+wandb: (3) Don't visualize my results
+wandb: Enter your choice: 3
+wandb: You chose "Don't visualize my results"
+wandb: Using W&B in offline mode.
+wandb: W&B API key is configured. Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.24.0
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /content/drive/MyDrive/Elyza_FineTuning/wandb/offline-run-20260126_010249-5n8eeumm
+wandb: Detected [openai] in use.
+wandb: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+wandb: For more information, check out the docs at: https://weave-docs.wandb.ai/
+{'loss': 1.4659, 'grad_norm': 0.5570119023323059, 'learning_rate': 0.00019907514450867052, 'epoch': 0.03}
+{'loss': 0.9994, 'grad_norm': 0.369684100151062, 'learning_rate': 0.00019676300578034682, 'epoch': 0.07}
+{'loss': 0.8601, 'grad_norm': 0.27458062767982483, 'learning_rate': 0.00019445086705202313, 'epoch': 0.1}
+{'loss': 0.8337, 'grad_norm': 0.2532697021961212, 'learning_rate': 0.00019213872832369943, 'epoch': 0.14}
+{'loss': 0.7919, 'grad_norm': 0.28369900584220886, 'learning_rate': 0.00018982658959537573, 'epoch': 0.17}
+{'loss': 0.785, 'grad_norm': 0.25857868790626526, 'learning_rate': 0.00018751445086705203, 'epoch': 0.21}
+{'loss': 0.7583, 'grad_norm': 0.2883533835411072, 'learning_rate': 0.00018520231213872834, 'epoch': 0.24}
+{'loss': 0.7403, 'grad_norm': 0.27888259291648865, 'learning_rate': 0.00018289017341040464, 'epoch': 0.28}
+{'loss': 0.7563, 'grad_norm': 0.2714376747608185, 'learning_rate': 0.00018057803468208094, 'epoch': 0.31}
+{'loss': 0.7424, 'grad_norm': 0.2765602469444275, 'learning_rate': 0.00017826589595375725, 'epoch': 0.34}
+{'loss': 0.7098, 'grad_norm': 0.2931775450706482, 'learning_rate': 0.00017595375722543352, 'epoch': 0.38}
+{'loss': 0.7246, 'grad_norm': 0.31415942311286926, 'learning_rate': 0.00017364161849710982, 'epoch': 0.41}
+{'loss': 0.7485, 'grad_norm': 0.28294411301612854, 'learning_rate': 0.00017132947976878613, 'epoch': 0.45}
+{'loss': 0.7051, 'grad_norm': 0.2822190225124359, 'learning_rate': 0.00016901734104046243, 'epoch': 0.48}
+{'loss': 0.725, 'grad_norm': 0.2815583348274231, 'learning_rate': 0.00016670520231213873, 'epoch': 0.52}
+{'loss': 0.7291, 'grad_norm': 0.29433172941207886, 'learning_rate': 0.00016439306358381504, 'epoch': 0.55}
+{'loss': 0.6932, 'grad_norm': 0.27145299315452576, 'learning_rate': 0.00016208092485549134, 'epoch': 0.59}
+{'loss': 0.7118, 'grad_norm': 0.3007720708847046, 'learning_rate': 0.00015976878612716764, 'epoch': 0.62}
+{'loss': 0.6914, 'grad_norm': 0.3046613037586212, 'learning_rate': 0.00015745664739884394, 'epoch': 0.66}
+{'loss': 0.6818, 'grad_norm': 0.27163273096084595, 'learning_rate': 0.00015514450867052025, 'epoch': 0.69}
+{'loss': 0.6933, 'grad_norm': 0.2778688073158264, 'learning_rate': 0.00015283236994219655, 'epoch': 0.72}
+{'loss': 0.7158, 'grad_norm': 0.29631900787353516, 'learning_rate': 0.00015052023121387285, 'epoch': 0.76}
+{'loss': 0.6934, 'grad_norm': 0.28980422019958496, 'learning_rate': 0.00014820809248554915, 'epoch': 0.79}
+{'loss': 0.7021, 'grad_norm': 0.2793084681034088, 'learning_rate': 0.00014589595375722546, 'epoch': 0.83}
+{'loss': 0.7016, 'grad_norm': 0.3000265657901764, 'learning_rate': 0.00014358381502890176, 'epoch': 0.86}
+{'loss': 0.6878, 'grad_norm': 0.294671893119812, 'learning_rate': 0.00014127167630057804, 'epoch': 0.9}
+{'loss': 0.6868, 'grad_norm': 0.28428298234939575, 'learning_rate': 0.00013895953757225434, 'epoch': 0.93}
+{'loss': 0.6814, 'grad_norm': 0.2820483446121216, 'learning_rate': 0.00013664739884393064, 'epoch': 0.97}
+{'loss': 0.6737, 'grad_norm': 0.32459598779678345, 'learning_rate': 0.00013433526011560694, 'epoch': 1.0}
+{'loss': 0.5989, 'grad_norm': 0.2854005992412567, 'learning_rate': 0.00013202312138728322, 'epoch': 1.03}
+{'loss': 0.5982, 'grad_norm': 0.3287278413772583, 'learning_rate': 0.00012971098265895952, 'epoch': 1.07}
+{'loss': 0.6004, 'grad_norm': 0.3285604417324066, 'learning_rate': 0.00012739884393063583, 'epoch': 1.1}
+{'loss': 0.6044, 'grad_norm': 0.36449337005615234, 'learning_rate': 0.00012508670520231213, 'epoch': 1.14}
+{'loss': 0.6084, 'grad_norm': 0.33621278405189514, 'learning_rate': 0.00012277456647398843, 'epoch': 1.17}
+{'loss': 0.5834, 'grad_norm': 0.3727506399154663, 'learning_rate': 0.00012046242774566473, 'epoch': 1.21}
+{'loss': 0.578, 'grad_norm': 0.37740322947502136, 'learning_rate': 0.00011815028901734104, 'epoch': 1.24}
+{'loss': 0.5842, 'grad_norm': 0.36573120951652527, 'learning_rate': 0.00011583815028901734, 'epoch': 1.28}
+{'loss': 0.607, 'grad_norm': 0.37512388825416565, 'learning_rate': 0.00011352601156069364, 'epoch': 1.31}
+{'loss': 0.5745, 'grad_norm': 0.4005619287490845, 'learning_rate': 0.00011121387283236995, 'epoch': 1.34}
+{'loss': 0.5758, 'grad_norm': 0.3738985061645508, 'learning_rate': 0.00010890173410404625, 'epoch': 1.38}
+{'loss': 0.5985, 'grad_norm': 0.3889324963092804, 'learning_rate': 0.00010658959537572255, 'epoch': 1.41}
+{'loss': 0.5972, 'grad_norm': 0.382467657327652, 'learning_rate': 0.00010427745664739885, 'epoch': 1.45}
+{'loss': 0.5749, 'grad_norm': 0.3504434823989868, 'learning_rate': 0.00010196531791907516, 'epoch': 1.48}
+{'loss': 0.5711, 'grad_norm': 0.41823020577430725, 'learning_rate': 9.965317919075145e-05, 'epoch': 1.52}
+{'loss': 0.5813, 'grad_norm': 0.3817571699619293, 'learning_rate': 9.734104046242775e-05, 'epoch': 1.55}
+{'loss': 0.5787, 'grad_norm': 0.4174633026123047, 'learning_rate': 9.502890173410405e-05, 'epoch': 1.59}
+{'loss': 0.5719, 'grad_norm': 0.3724631369113922, 'learning_rate': 9.271676300578035e-05, 'epoch': 1.62}
+{'loss': 0.5774, 'grad_norm': 0.37792330980300903, 'learning_rate': 9.040462427745666e-05, 'epoch': 1.66}
+{'loss': 0.5718, 'grad_norm': 0.4183071255683899, 'learning_rate': 8.809248554913295e-05, 'epoch': 1.69}
+{'loss': 0.5648, 'grad_norm': 0.3908974230289459, 'learning_rate': 8.578034682080925e-05, 'epoch': 1.72}
+{'loss': 0.5856, 'grad_norm': 0.35107141733169556, 'learning_rate': 8.346820809248555e-05, 'epoch': 1.76}
+{'loss': 0.574, 'grad_norm': 0.3720804750919342, 'learning_rate': 8.115606936416186e-05, 'epoch': 1.79}
+{'loss': 0.5714, 'grad_norm': 0.40245935320854187, 'learning_rate': 7.884393063583816e-05, 'epoch': 1.83}
+{'loss': 0.5767, 'grad_norm': 0.3569892942905426, 'learning_rate': 7.653179190751445e-05, 'epoch': 1.86}
+{'loss': 0.5835, 'grad_norm': 0.4232385754585266, 'learning_rate': 7.421965317919075e-05, 'epoch': 1.9}
+{'loss': 0.5929, 'grad_norm': 0.42210888862609863, 'learning_rate': 7.190751445086705e-05, 'epoch': 1.93}
+{'loss': 0.5732, 'grad_norm': 0.39907053112983704, 'learning_rate': 6.959537572254336e-05, 'epoch': 1.97}
+{'loss': 0.5615, 'grad_norm': 0.3927408456802368, 'learning_rate': 6.728323699421966e-05, 'epoch': 2.0}
+{'loss': 0.4729, 'grad_norm': 0.3670468032360077, 'learning_rate': 6.497109826589596e-05, 'epoch': 2.03}
+{'loss': 0.4677, 'grad_norm': 0.4537084996700287, 'learning_rate': 6.265895953757226e-05, 'epoch': 2.07}
+{'loss': 0.4647, 'grad_norm': 0.44173091650009155, 'learning_rate': 6.034682080924856e-05, 'epoch': 2.1}
+{'loss': 0.4606, 'grad_norm': 0.5147091150283813, 'learning_rate': 5.803468208092486e-05, 'epoch': 2.14}
+{'loss': 0.4525, 'grad_norm': 0.4671124219894409, 'learning_rate': 5.5722543352601166e-05, 'epoch': 2.17}
+{'loss': 0.4757, 'grad_norm': 0.4654048979282379, 'learning_rate': 5.3410404624277455e-05, 'epoch': 2.21}
+{'loss': 0.4868, 'grad_norm': 0.512266993522644, 'learning_rate': 5.109826589595376e-05, 'epoch': 2.24}
+{'loss': 0.4508, 'grad_norm': 0.45136138796806335, 'learning_rate': 4.878612716763006e-05, 'epoch': 2.28}
+{'loss': 0.4703, 'grad_norm': 0.46878963708877563, 'learning_rate': 4.647398843930636e-05, 'epoch': 2.31}
+{'loss': 0.4688, 'grad_norm': 0.4791582226753235, 'learning_rate': 4.416184971098266e-05, 'epoch': 2.34}
+{'loss': 0.4698, 'grad_norm': 0.4741610884666443, 'learning_rate': 4.184971098265896e-05, 'epoch': 2.38}
+{'loss': 0.4785, 'grad_norm': 0.486470103263855, 'learning_rate': 3.9537572254335265e-05, 'epoch': 2.41}
+{'loss': 0.4825, 'grad_norm': 0.4742496609687805, 'learning_rate': 3.722543352601156e-05, 'epoch': 2.45}
+{'loss': 0.4514, 'grad_norm': 0.5158607959747314, 'learning_rate': 3.4913294797687864e-05, 'epoch': 2.48}
+{'loss': 0.4582, 'grad_norm': 0.5250205397605896, 'learning_rate': 3.260115606936417e-05, 'epoch': 2.52}
+{'loss': 0.4668, 'grad_norm': 0.5178324580192566, 'learning_rate': 3.0289017341040466e-05, 'epoch': 2.55}
+{'loss': 0.4503, 'grad_norm': 0.4844346046447754, 'learning_rate': 2.7976878612716766e-05, 'epoch': 2.59}
+{'loss': 0.4622, 'grad_norm': 0.49275457859039307, 'learning_rate': 2.5664739884393062e-05, 'epoch': 2.62}
+{'loss': 0.469, 'grad_norm': 0.4962958097457886, 'learning_rate': 2.3352601156069365e-05, 'epoch': 2.66}
+{'loss': 0.4689, 'grad_norm': 0.5109402537345886, 'learning_rate': 2.1040462427745667e-05, 'epoch': 2.69}
+{'loss': 0.4624, 'grad_norm': 0.5116623640060425, 'learning_rate': 1.8728323699421967e-05, 'epoch': 2.72}
+{'loss': 0.4645, 'grad_norm': 0.513569712638855, 'learning_rate': 1.6416184971098266e-05, 'epoch': 2.76}
+{'loss': 0.4657, 'grad_norm': 0.5311485528945923, 'learning_rate': 1.4104046242774569e-05, 'epoch': 2.79}
+{'loss': 0.4497, 'grad_norm': 0.47969508171081543, 'learning_rate': 1.1791907514450867e-05, 'epoch': 2.83}
+{'loss': 0.4427, 'grad_norm': 0.5360260605812073, 'learning_rate': 9.479768786127168e-06, 'epoch': 2.86}
+{'loss': 0.4646, 'grad_norm': 0.496099591255188, 'learning_rate': 7.167630057803469e-06, 'epoch': 2.9}
+{'loss': 0.4611, 'grad_norm': 0.49585792422294617, 'learning_rate': 4.8554913294797685e-06, 'epoch': 2.93}
+{'loss': 0.4516, 'grad_norm': 0.5135550498962402, 'learning_rate': 2.5433526011560696e-06, 'epoch': 2.97}
+{'loss': 0.4587, 'grad_norm': 0.5310221314430237, 'learning_rate': 2.3121387283236997e-07, 'epoch': 3.0}
+{'train_runtime': 7259.2091, 'train_samples_per_second': 0.958, 'train_steps_per_second': 0.12, 'train_loss': 0.6029763649249898, 'epoch': 3.0}
+100% 870/870 [2:00:52<00:00,  8.34s/it]
+wandb: 
+wandb: Run history:
+wandb:         train/epoch ▁▁▁▁▁▂▂▂▂▂▃▃▃▃▃▄▄▄▄▄▄▅▅▅▅▆▆▆▆▆▇▇▇▇▇█████
+wandb:   train/global_step ▁▁▁▁▁▂▂▂▂▂▃▃▃▃▃▃▃▄▄▄▄▅▅▅▅▅▅▅▅▆▆▆▇▇▇▇▇▇██
+wandb:     train/grad_norm █▁▁▂▂▂▂▂▂▁▂▂▂▃▄▄▄▄▄▄▄▄▅▄▄▅▄▄▆▅▆▆▆▆▇▇▇▇▇▇
+wandb: train/learning_rate █████▇▇▇▇▇▆▆▆▆▆▅▅▅▅▅▄▄▄▄▄▄▃▃▃▃▂▂▂▂▂▂▂▂▁▁
+wandb:          train/loss █▅▄▃▃▃▃▃▃▃▃▃▃▃▃▂▂▂▂▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb: 
+wandb: Run summary:
+wandb:               total_flos 1.1743653749140685e+17
+wandb:              train/epoch 3
+wandb:        train/global_step 870
+wandb:          train/grad_norm 0.53102
+wandb:      train/learning_rate 0.0
+wandb:               train/loss 0.4587
+wandb:               train_loss 0.60298
+wandb:            train_runtime 7259.2091
+wandb: train_samples_per_second 0.958
+wandb:   train_steps_per_second 0.12
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /content/drive/MyDrive/Elyza_FineTuning/wandb/offline-run-20260126_010249-5n8eeumm
+wandb: Find logs at: ./wandb/offline-run-20260126_010249-5n8eeumm/logs
+💾 学習完了。モデルを保存します...
+✅ すべて完了しました！

@@ -59,7 +59,7 @@ if checkpoints:
     print(f"🔄 前回の続きから再開します: {latest_checkpoint}")
     resume_from_checkpoint = latest_checkpoint
 else:
-    print("🚀 新規トレーニングを開始します")
+    print("新規トレーニングを開始します")
     resume_from_checkpoint = False
 
 # 6. トレーナーの設定

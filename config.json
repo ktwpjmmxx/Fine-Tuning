@@ -10,8 +10,8 @@
     "dataset_path": "./dataset/traindata_cleaned.jsonl",
     "output_dir": "./outputs",
     "learning_rate": 2e-4,
-    "per_device_train_batch_size": 2,
-    "gradient_accumulation_steps": 4,
+    "per_device_train_batch_size": 1,   <-- ここを変更（2から1へ）
+    "gradient_accumulation_steps": 8,   <-- ここを変更（4から8へ）
     "num_train_epochs": 3,
     "save_steps": 50,
     "logging_steps": 10
