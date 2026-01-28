@@ -1,0 +1,8 @@
+streamlit
+torch
+xformers<0.0.30
+trl==0.12.1
+peft>=0.18.1
+accelerate>=1.12.0
+bitsandbytes
+unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git

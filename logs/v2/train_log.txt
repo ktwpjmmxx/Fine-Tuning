@@ -1,0 +1,171 @@
+🦥 Unsloth: Will patch your computer to enable 2x faster free finetuning.
+2026-01-28 01:02:32.334550: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1769562152.438013   12221 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1769562152.469717   12221 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1769562152.512520   12221 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1769562152.512559   12221 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1769562152.512568   12221 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1769562152.512576   12221 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2026-01-28 01:02:32.520497: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+🦥 Unsloth Zoo will now patch everything to make training faster!
+==((====))==  Unsloth 2026.1.4: Fast Llama patching. Transformers: 4.57.6.
+   \\   /|    Tesla T4. Num GPUs = 1. Max memory: 14.741 GB. Platform: Linux.
+O^O/ \_/ \    Torch: 2.9.0+cu128. CUDA: 7.5. CUDA Toolkit: 12.8. Triton: 3.5.0
+\        /    Bfloat16 = FALSE. FA [Xformers = None. FA2 = False]
+ "-____-"     Free license: http://github.com/unslothai/unsloth
+Unsloth: Fast downloading is enabled - ignore downloading bars which are red colored!
+The following TP rules were not applied on any of the layers: {'layers.*.self_attn.q_proj': 'colwise', 'layers.*.self_attn.k_proj': 'colwise', 'layers.*.self_attn.v_proj': 'colwise', 'layers.*.self_attn.o_proj': 'rowwise', 'layers.*.mlp.gate_proj': 'colwise', 'layers.*.mlp.up_proj': 'colwise', 'layers.*.mlp.down_proj': 'rowwise'}
+The following layers were not sharded: model.layers.*.input_layernorm.weight, model.embed_tokens.weight, model.layers.*.post_attention_layernorm.weight, model.norm.weight, lm_head.weight
+Loading checkpoint shards: 100% 2/2 [01:02<00:00, 31.34s/it]
+elyza/ELYZA-japanese-Llama-2-7b-instruct does not have a padding token! Will use pad_token = <unk>.
+Unsloth: Dropout = 0 is supported for fast patching. You are using dropout = 0.05.
+Unsloth will patch all other layers, except LoRA matrices, causing a performance hit.
+Unsloth 2026.1.4 patched 32 layers with 0 QKV layers, 0 O layers and 0 MLP layers.
+The model is already on multiple devices. Skipping the move to device specified in `args`.
+==((====))==  Unsloth - 2x faster free finetuning | Num GPUs used = 1
+   \\   /|    Num examples = 2,635 | Num Epochs = 3 | Total steps = 990
+O^O/ \_/ \    Batch size per device = 1 | Gradient accumulation steps = 8
+\        /    Data Parallel GPUs = 1 | Total batch size (1 x 8 x 1) = 8
+ "-____-"     Trainable parameters = 39,976,960 of 6,778,392,576 (0.59% trained)
+wandb: (1) Create a W&B account
+wandb: (2) Use an existing W&B account
+wandb: (3) Don't visualize my results
+wandb: Enter your choice: 3
+wandb: You chose "Don't visualize my results"
+wandb: Using W&B in offline mode.
+wandb: W&B API key is configured. Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.24.0
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /content/wandb/offline-run-20260128_010554-mdwi6zjm
+wandb: Detected [huggingface_hub.inference, openai] in use.
+wandb: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+wandb: For more information, check out the docs at: https://weave-docs.wandb.ai/
+{'loss': 1.3677, 'grad_norm': 0.5564630627632141, 'learning_rate': 0.00019918781725888326, 'epoch': 0.03}
+{'loss': 0.8218, 'grad_norm': 0.3648543059825897, 'learning_rate': 0.0001971573604060914, 'epoch': 0.06}
+{'loss': 0.7145, 'grad_norm': 0.3365894854068756, 'learning_rate': 0.0001951269035532995, 'epoch': 0.09}
+{'loss': 0.6576, 'grad_norm': 0.3266793489456177, 'learning_rate': 0.0001930964467005076, 'epoch': 0.12}
+{'loss': 0.6685, 'grad_norm': 0.3156002163887024, 'learning_rate': 0.00019106598984771576, 'epoch': 0.15}
+{'loss': 0.6321, 'grad_norm': 0.3278736472129822, 'learning_rate': 0.00018903553299492388, 'epoch': 0.18}
+{'loss': 0.6296, 'grad_norm': 0.3564648926258087, 'learning_rate': 0.00018700507614213198, 'epoch': 0.21}
+{'loss': 0.6523, 'grad_norm': 0.35837963223457336, 'learning_rate': 0.0001849746192893401, 'epoch': 0.24}
+{'loss': 0.6248, 'grad_norm': 0.36207160353660583, 'learning_rate': 0.00018294416243654825, 'epoch': 0.27}
+{'loss': 0.6338, 'grad_norm': 0.3457392454147339, 'learning_rate': 0.00018091370558375635, 'epoch': 0.3}
+{'loss': 0.6004, 'grad_norm': 0.3233257234096527, 'learning_rate': 0.00017888324873096447, 'epoch': 0.33}
+{'loss': 0.6028, 'grad_norm': 0.29869186878204346, 'learning_rate': 0.00017685279187817262, 'epoch': 0.36}
+{'loss': 0.6267, 'grad_norm': 0.33293524384498596, 'learning_rate': 0.00017482233502538072, 'epoch': 0.39}
+{'loss': 0.6004, 'grad_norm': 0.3584153950214386, 'learning_rate': 0.00017279187817258884, 'epoch': 0.43}
+{'loss': 0.586, 'grad_norm': 0.31345516443252563, 'learning_rate': 0.00017076142131979696, 'epoch': 0.46}
+{'loss': 0.6034, 'grad_norm': 0.29371824860572815, 'learning_rate': 0.00016873096446700509, 'epoch': 0.49}
+{'loss': 0.5946, 'grad_norm': 0.3281124234199524, 'learning_rate': 0.0001667005076142132, 'epoch': 0.52}
+{'loss': 0.5857, 'grad_norm': 0.3093794882297516, 'learning_rate': 0.00016467005076142133, 'epoch': 0.55}
+{'loss': 0.5983, 'grad_norm': 0.3429616093635559, 'learning_rate': 0.00016263959390862943, 'epoch': 0.58}
+{'loss': 0.5944, 'grad_norm': 0.31332820653915405, 'learning_rate': 0.00016060913705583758, 'epoch': 0.61}
+{'loss': 0.5804, 'grad_norm': 0.31158292293548584, 'learning_rate': 0.0001585786802030457, 'epoch': 0.64}
+{'loss': 0.5866, 'grad_norm': 0.31350788474082947, 'learning_rate': 0.0001565482233502538, 'epoch': 0.67}
+{'loss': 0.5754, 'grad_norm': 0.320242315530777, 'learning_rate': 0.00015451776649746195, 'epoch': 0.7}
+{'loss': 0.565, 'grad_norm': 0.32921725511550903, 'learning_rate': 0.00015248730964467007, 'epoch': 0.73}
+{'loss': 0.572, 'grad_norm': 0.30387821793556213, 'learning_rate': 0.00015045685279187817, 'epoch': 0.76}
+{'loss': 0.5689, 'grad_norm': 0.3325393795967102, 'learning_rate': 0.0001484263959390863, 'epoch': 0.79}
+{'loss': 0.555, 'grad_norm': 0.33264583349227905, 'learning_rate': 0.00014639593908629444, 'epoch': 0.82}
+{'loss': 0.5541, 'grad_norm': 0.31803256273269653, 'learning_rate': 0.00014436548223350254, 'epoch': 0.85}
+{'loss': 0.5421, 'grad_norm': 0.3474951386451721, 'learning_rate': 0.00014233502538071066, 'epoch': 0.88}
+{'loss': 0.5611, 'grad_norm': 0.3249654769897461, 'learning_rate': 0.00014030456852791878, 'epoch': 0.91}
+{'loss': 0.5591, 'grad_norm': 0.3478652834892273, 'learning_rate': 0.0001382741116751269, 'epoch': 0.94}
+{'loss': 0.5629, 'grad_norm': 0.3316396176815033, 'learning_rate': 0.00013624365482233503, 'epoch': 0.97}
+{'loss': 0.5718, 'grad_norm': 0.5492961406707764, 'learning_rate': 0.00013421319796954315, 'epoch': 1.0}
+{'loss': 0.4761, 'grad_norm': 0.3733963072299957, 'learning_rate': 0.00013218274111675128, 'epoch': 1.03}
+{'loss': 0.4767, 'grad_norm': 0.34367039799690247, 'learning_rate': 0.0001301522842639594, 'epoch': 1.06}
+{'loss': 0.4603, 'grad_norm': 0.36150410771369934, 'learning_rate': 0.00012812182741116752, 'epoch': 1.09}
+{'loss': 0.4535, 'grad_norm': 0.34085163474082947, 'learning_rate': 0.00012609137055837562, 'epoch': 1.12}
+{'loss': 0.4669, 'grad_norm': 0.39733079075813293, 'learning_rate': 0.00012406091370558377, 'epoch': 1.15}
+{'loss': 0.4502, 'grad_norm': 0.4161439836025238, 'learning_rate': 0.00012203045685279188, 'epoch': 1.18}
+{'loss': 0.4621, 'grad_norm': 0.3720623850822449, 'learning_rate': 0.00012, 'epoch': 1.21}
+{'loss': 0.463, 'grad_norm': 0.37965553998947144, 'learning_rate': 0.00011796954314720811, 'epoch': 1.24}
+{'loss': 0.4579, 'grad_norm': 0.3946736454963684, 'learning_rate': 0.00011593908629441625, 'epoch': 1.27}
+{'loss': 0.4615, 'grad_norm': 0.40387454628944397, 'learning_rate': 0.00011390862944162437, 'epoch': 1.3}
+{'loss': 0.478, 'grad_norm': 0.4064231216907501, 'learning_rate': 0.00011187817258883248, 'epoch': 1.33}
+{'loss': 0.4823, 'grad_norm': 0.3828030526638031, 'learning_rate': 0.00010984771573604062, 'epoch': 1.36}
+{'loss': 0.4551, 'grad_norm': 0.4478541612625122, 'learning_rate': 0.00010781725888324874, 'epoch': 1.39}
+{'loss': 0.4427, 'grad_norm': 0.4159233868122101, 'learning_rate': 0.00010578680203045685, 'epoch': 1.43}
+{'loss': 0.471, 'grad_norm': 0.3944145143032074, 'learning_rate': 0.00010375634517766498, 'epoch': 1.46}
+{'loss': 0.444, 'grad_norm': 0.3891032636165619, 'learning_rate': 0.00010172588832487311, 'epoch': 1.49}
+{'loss': 0.4516, 'grad_norm': 0.4322523772716522, 'learning_rate': 9.969543147208122e-05, 'epoch': 1.52}
+ 51% 500/990 [1:09:56<1:08:53,  8.44s/it]wandb: WARNING URL not available in offline run
+{'loss': 0.4745, 'grad_norm': 0.3982299864292145, 'learning_rate': 9.766497461928935e-05, 'epoch': 1.55}
+{'loss': 0.4577, 'grad_norm': 0.38702550530433655, 'learning_rate': 9.563451776649747e-05, 'epoch': 1.58}
+{'loss': 0.4561, 'grad_norm': 0.5921263098716736, 'learning_rate': 9.360406091370559e-05, 'epoch': 1.61}
+{'loss': 0.4348, 'grad_norm': 0.40821146965026855, 'learning_rate': 9.157360406091371e-05, 'epoch': 1.64}
+{'loss': 0.4663, 'grad_norm': 0.4491584300994873, 'learning_rate': 8.954314720812184e-05, 'epoch': 1.67}
+{'loss': 0.4585, 'grad_norm': 0.41074079275131226, 'learning_rate': 8.751269035532995e-05, 'epoch': 1.7}
+{'loss': 0.4605, 'grad_norm': 0.4535371661186218, 'learning_rate': 8.548223350253808e-05, 'epoch': 1.73}
+{'loss': 0.4598, 'grad_norm': 0.38141578435897827, 'learning_rate': 8.34517766497462e-05, 'epoch': 1.76}
+{'loss': 0.4536, 'grad_norm': 0.4504314661026001, 'learning_rate': 8.142131979695432e-05, 'epoch': 1.79}
+{'loss': 0.447, 'grad_norm': 0.3731709122657776, 'learning_rate': 7.939086294416244e-05, 'epoch': 1.82}
+{'loss': 0.4624, 'grad_norm': 0.4196929633617401, 'learning_rate': 7.736040609137056e-05, 'epoch': 1.85}
+{'loss': 0.471, 'grad_norm': 0.5616906881332397, 'learning_rate': 7.532994923857867e-05, 'epoch': 1.88}
+{'loss': 0.4592, 'grad_norm': 0.4121301770210266, 'learning_rate': 7.329949238578681e-05, 'epoch': 1.91}
+{'loss': 0.4687, 'grad_norm': 0.4320332109928131, 'learning_rate': 7.126903553299493e-05, 'epoch': 1.94}
+{'loss': 0.4638, 'grad_norm': 0.44995367527008057, 'learning_rate': 6.923857868020304e-05, 'epoch': 1.97}
+{'loss': 0.4442, 'grad_norm': 0.6976768374443054, 'learning_rate': 6.720812182741118e-05, 'epoch': 2.0}
+{'loss': 0.3676, 'grad_norm': 0.409030556678772, 'learning_rate': 6.517766497461929e-05, 'epoch': 2.03}
+{'loss': 0.3513, 'grad_norm': 0.5044942498207092, 'learning_rate': 6.314720812182741e-05, 'epoch': 2.06}
+{'loss': 0.3329, 'grad_norm': 0.45658257603645325, 'learning_rate': 6.111675126903554e-05, 'epoch': 2.09}
+{'loss': 0.3359, 'grad_norm': 0.46201291680336, 'learning_rate': 5.908629441624366e-05, 'epoch': 2.12}
+{'loss': 0.3286, 'grad_norm': 0.47420623898506165, 'learning_rate': 5.7055837563451776e-05, 'epoch': 2.15}
+{'loss': 0.3218, 'grad_norm': 0.5039449334144592, 'learning_rate': 5.50253807106599e-05, 'epoch': 2.18}
+{'loss': 0.3488, 'grad_norm': 0.5008512735366821, 'learning_rate': 5.2994923857868016e-05, 'epoch': 2.21}
+{'loss': 0.3334, 'grad_norm': 0.4980648159980774, 'learning_rate': 5.0964467005076146e-05, 'epoch': 2.24}
+{'loss': 0.3317, 'grad_norm': 0.51847904920578, 'learning_rate': 4.893401015228426e-05, 'epoch': 2.27}
+{'loss': 0.3465, 'grad_norm': 0.4978070557117462, 'learning_rate': 4.6903553299492386e-05, 'epoch': 2.3}
+{'loss': 0.3572, 'grad_norm': 0.5241397023200989, 'learning_rate': 4.487309644670051e-05, 'epoch': 2.33}
+{'loss': 0.3385, 'grad_norm': 0.47325846552848816, 'learning_rate': 4.284263959390863e-05, 'epoch': 2.36}
+{'loss': 0.3581, 'grad_norm': 0.5499976873397827, 'learning_rate': 4.0812182741116755e-05, 'epoch': 2.39}
+{'loss': 0.3174, 'grad_norm': 0.5307304859161377, 'learning_rate': 3.878172588832488e-05, 'epoch': 2.43}
+{'loss': 0.3392, 'grad_norm': 0.5245914459228516, 'learning_rate': 3.6751269035532995e-05, 'epoch': 2.46}
+{'loss': 0.3336, 'grad_norm': 0.5195655226707458, 'learning_rate': 3.472081218274112e-05, 'epoch': 2.49}
+{'loss': 0.341, 'grad_norm': 0.5432413220405579, 'learning_rate': 3.269035532994924e-05, 'epoch': 2.52}
+{'loss': 0.3274, 'grad_norm': 0.504167914390564, 'learning_rate': 3.0659898477157365e-05, 'epoch': 2.55}
+{'loss': 0.3193, 'grad_norm': 0.5285038948059082, 'learning_rate': 2.862944162436548e-05, 'epoch': 2.58}
+{'loss': 0.3145, 'grad_norm': 0.5341456532478333, 'learning_rate': 2.6598984771573604e-05, 'epoch': 2.61}
+{'loss': 0.3345, 'grad_norm': 0.5327149629592896, 'learning_rate': 2.4568527918781728e-05, 'epoch': 2.64}
+{'loss': 0.3489, 'grad_norm': 0.5511215925216675, 'learning_rate': 2.2538071065989848e-05, 'epoch': 2.67}
+{'loss': 0.3394, 'grad_norm': 0.5424011945724487, 'learning_rate': 2.050761421319797e-05, 'epoch': 2.7}
+{'loss': 0.3111, 'grad_norm': 0.537214457988739, 'learning_rate': 1.847715736040609e-05, 'epoch': 2.73}
+{'loss': 0.3308, 'grad_norm': 0.5125700235366821, 'learning_rate': 1.6446700507614214e-05, 'epoch': 2.76}
+{'loss': 0.327, 'grad_norm': 0.547544002532959, 'learning_rate': 1.4416243654822337e-05, 'epoch': 2.79}
+{'loss': 0.3385, 'grad_norm': 0.5140750408172607, 'learning_rate': 1.2385786802030459e-05, 'epoch': 2.82}
+{'loss': 0.3372, 'grad_norm': 0.5154085755348206, 'learning_rate': 1.0355329949238579e-05, 'epoch': 2.85}
+{'loss': 0.3205, 'grad_norm': 0.5425072312355042, 'learning_rate': 8.3248730964467e-06, 'epoch': 2.88}
+{'loss': 0.3319, 'grad_norm': 0.5701858997344971, 'learning_rate': 6.2944162436548225e-06, 'epoch': 2.91}
+{'loss': 0.3252, 'grad_norm': 0.5161294937133789, 'learning_rate': 4.263959390862944e-06, 'epoch': 2.94}
+{'loss': 0.3229, 'grad_norm': 0.5166114568710327, 'learning_rate': 2.233502538071066e-06, 'epoch': 2.97}
+{'loss': 0.3029, 'grad_norm': 0.7205268740653992, 'learning_rate': 2.0304568527918783e-07, 'epoch': 3.0}
+100% 990/990 [2:18:21<00:00,  6.45s/it]wandb: WARNING URL not available in offline run
+{'train_runtime': 8410.0274, 'train_samples_per_second': 0.94, 'train_steps_per_second': 0.118, 'train_loss': 0.4743062067513514, 'epoch': 3.0}
+100% 990/990 [2:18:27<00:00,  8.39s/it]
+wandb: 
+wandb: Run history:
+wandb:         train/epoch ▁▁▁▁▁▂▂▂▂▂▃▃▃▃▃▄▄▄▄▄▄▅▅▅▅▅▆▆▆▆▆▆▆▆▆▇▇▇▇█
+wandb:   train/global_step ▁▁▁▁▂▂▂▂▃▃▃▃▃▃▃▄▄▄▄▄▅▅▅▅▆▆▆▆▆▆▇▇▇▇▇▇▇▇██
+wandb:     train/grad_norm ▃▂▁▂▃▂▁▂▁▂▁▂▂▂▇▄▃▃▄▄▃▄▃▄▅▆▅▆▆▇▇▆▇▇▇▇▇▇█▇
+wandb: train/learning_rate █████▇▇▇▇▇▆▆▆▆▆▅▅▅▅▄▄▄▄▄▄▃▃▃▃▃▂▂▂▂▂▁▁▁▁▁
+wandb:          train/loss █▄▃▃▃▃▃▃▃▃▃▃▃▃▂▂▂▂▂▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb: 
+wandb: Run summary:
+wandb:               total_flos 1.524778746131497e+17
+wandb:              train/epoch 3
+wandb:        train/global_step 990
+wandb:          train/grad_norm 0.72053
+wandb:      train/learning_rate 0.0
+wandb:               train/loss 0.3029
+wandb:               train_loss 0.47431
+wandb:            train_runtime 8410.0274
+wandb: train_samples_per_second 0.94
+wandb:   train_steps_per_second 0.118
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /content/wandb/offline-run-20260128_010554-mdwi6zjm
+wandb: Find logs at: ./wandb/offline-run-20260128_010554-mdwi6zjm/logs
+✅ Training Completed and Model Saved!
