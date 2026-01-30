@@ -1,0 +1,139 @@
+🦥 Unsloth: Will patch your computer to enable 2x faster free finetuning.
+2026-01-29 06:19:20.348760: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1769667560.577369    3689 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1769667560.633915    3689 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1769667561.099558    3689 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1769667561.099600    3689 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1769667561.099605    3689 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1769667561.099610    3689 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2026-01-29 06:19:21.143194: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+🦥 Unsloth Zoo will now patch everything to make training faster!
+Unsloth: Could not import trl.trainer.ddpo_trainer: Failed to import trl.trainer.ddpo_trainer because of the following error (look up to see its traceback):
+Failed to import trl.models.modeling_sd_base because of the following error (look up to see its traceback):
+Failed to import diffusers.pipelines.stable_diffusion.pipeline_stable_diffusion because of the following error (look up to see its traceback):
+Failed to import diffusers.loaders.ip_adapter because of the following error (look up to see its traceback):
+/usr/local/lib/python3.12/dist-packages/xformers/flash_attn_3/_C.so: undefined symbol: torch_list_push_back
+モデルをロードしています...
+==((====))==  Unsloth 2026.1.4: Fast Llama patching. Transformers: 4.57.6.
+   \\   /|    Tesla T4. Num GPUs = 1. Max memory: 14.741 GB. Platform: Linux.
+O^O/ \_/ \    Torch: 2.9.0+cu126. CUDA: 7.5. CUDA Toolkit: 12.6. Triton: 3.5.0
+\        /    Bfloat16 = FALSE. FA [Xformers = None. FA2 = False]
+ "-____-"     Free license: http://github.com/unslothai/unsloth
+Unsloth: Fast downloading is enabled - ignore downloading bars which are red colored!
+model.safetensors.index.json: 23.9kB [00:00, 78.6MB/s]
+model-00001-of-00004.safetensors: 100% 4.98G/4.98G [00:49<00:00, 101MB/s]
+model-00002-of-00004.safetensors: 100% 5.00G/5.00G [00:52<00:00, 94.9MB/s]
+model-00003-of-00004.safetensors: 100% 4.92G/4.92G [00:38<00:00, 128MB/s]
+model-00004-of-00004.safetensors: 100% 1.17G/1.17G [00:11<00:00, 104MB/s]
+Loading checkpoint shards: 100% 4/4 [01:10<00:00, 17.74s/it]
+generation_config.json: 100% 194/194 [00:00<00:00, 1.29MB/s]
+tokenizer_config.json: 51.0kB [00:00, 143MB/s]
+tokenizer.json: 9.09MB [00:00, 122MB/s]
+special_tokens_map.json: 100% 296/296 [00:00<00:00, 2.54MB/s]
+elyza/Llama-3-ELYZA-JP-8b does not have a padding token! Will use pad_token = <|reserved_special_token_250|>.
+Unsloth 2026.1.4 patched 32 layers with 32 QKV layers, 32 O layers and 32 MLP layers.
+📂 データセットを読み込んでいます: traindata_v2.jsonl
+Generating train split: 3333 examples [00:00, 29015.93 examples/s]
+Map: 100% 3333/3333 [00:00<00:00, 38595.01 examples/s]
+学習を開始します...
+Map (num_proc=2): 100% 3333/3333 [00:04<00:00, 772.75 examples/s] 
+==((====))==  Unsloth - 2x faster free finetuning | Num GPUs used = 1
+   \\   /|    Num examples = 3,333 | Num Epochs = 2 | Total steps = 834
+O^O/ \_/ \    Batch size per device = 2 | Gradient accumulation steps = 4
+\        /    Data Parallel GPUs = 1 | Total batch size (2 x 4 x 1) = 8
+ "-____-"     Trainable parameters = 41,943,040 of 8,072,204,288 (0.52% trained)
+wandb: (1) Create a W&B account
+wandb: (2) Use an existing W&B account
+wandb: (3) Don't visualize my results
+wandb: Enter your choice: 3
+wandb: You chose "Don't visualize my results"
+wandb: Using W&B in offline mode.
+wandb: W&B API key is configured. Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.24.0
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /content/drive/MyDrive/Llama3_FineTune/wandb/offline-run-20260129_062433-o9b3pboe
+wandb: Detected [openai] in use.
+wandb: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+wandb: For more information, check out the docs at: https://weave-docs.wandb.ai/
+  0% 0/834 [00:00<?, ?it/s]Unsloth: Will smartly offload gradients to save VRAM!
+{'loss': 2.4223, 'grad_norm': 2.6050545784528367e-05, 'learning_rate': 0.00019903498190591075, 'epoch': 0.02}
+{'loss': 1.9756, 'grad_norm': 1.8182034182245843e-05, 'learning_rate': 0.0001966224366706876, 'epoch': 0.05}
+{'loss': 1.6757, 'grad_norm': 1.4226207895262633e-05, 'learning_rate': 0.0001942098914354644, 'epoch': 0.07}
+{'loss': 1.417, 'grad_norm': 1.3326723092177417e-05, 'learning_rate': 0.00019179734620024125, 'epoch': 0.1}
+{'loss': 1.341, 'grad_norm': 9.598937140253838e-06, 'learning_rate': 0.0001893848009650181, 'epoch': 0.12}
+{'loss': 1.2297, 'grad_norm': 1.2782525118382182e-05, 'learning_rate': 0.00018697225572979494, 'epoch': 0.14}
+{'loss': 1.1654, 'grad_norm': 9.734707418829203e-06, 'learning_rate': 0.00018455971049457178, 'epoch': 0.17}
+{'loss': 1.1102, 'grad_norm': 8.492429515172262e-06, 'learning_rate': 0.00018214716525934862, 'epoch': 0.19}
+{'loss': 1.055, 'grad_norm': 8.955490557127632e-06, 'learning_rate': 0.00017973462002412546, 'epoch': 0.22}
+{'loss': 1.0531, 'grad_norm': 8.81780761119444e-06, 'learning_rate': 0.0001773220747889023, 'epoch': 0.24}
+{'loss': 1.015, 'grad_norm': 9.466008123126812e-06, 'learning_rate': 0.00017490952955367915, 'epoch': 0.26}
+{'loss': 1.0202, 'grad_norm': 8.351126780326013e-06, 'learning_rate': 0.000172496984318456, 'epoch': 0.29}
+{'loss': 1.0266, 'grad_norm': 8.784915735304821e-06, 'learning_rate': 0.0001700844390832328, 'epoch': 0.31}
+{'loss': 1.0114, 'grad_norm': 7.955314686114434e-06, 'learning_rate': 0.00016767189384800965, 'epoch': 0.34}
+{'loss': 0.9946, 'grad_norm': 8.705922482477035e-06, 'learning_rate': 0.0001652593486127865, 'epoch': 0.36}
+{'loss': 1.0358, 'grad_norm': 7.786776222928893e-06, 'learning_rate': 0.00016284680337756333, 'epoch': 0.38}
+{'loss': 1.0092, 'grad_norm': 8.985218300949782e-06, 'learning_rate': 0.00016043425814234017, 'epoch': 0.41}
+{'loss': 1.0439, 'grad_norm': 8.527693353244103e-06, 'learning_rate': 0.00015802171290711702, 'epoch': 0.43}
+{'loss': 0.9705, 'grad_norm': 8.634919140604325e-06, 'learning_rate': 0.00015560916767189386, 'epoch': 0.46}
+{'loss': 1.034, 'grad_norm': 9.675588444224559e-06, 'learning_rate': 0.0001531966224366707, 'epoch': 0.48}
+{'loss': 1.02, 'grad_norm': 1.0122245839738753e-05, 'learning_rate': 0.00015078407720144754, 'epoch': 0.5}
+{'loss': 1.0394, 'grad_norm': 9.663227501732763e-06, 'learning_rate': 0.0001483715319662244, 'epoch': 0.53}
+{'loss': 1.0094, 'grad_norm': 9.993168532673735e-06, 'learning_rate': 0.0001459589867310012, 'epoch': 0.55}
+{'loss': 1.0157, 'grad_norm': 8.843997420626692e-06, 'learning_rate': 0.00014354644149577804, 'epoch': 0.58}
+{'loss': 0.9743, 'grad_norm': 9.145980584435165e-06, 'learning_rate': 0.0001411338962605549, 'epoch': 0.6}
+{'loss': 0.9966, 'grad_norm': 9.498558938503265e-06, 'learning_rate': 0.00013872135102533173, 'epoch': 0.62}
+{'loss': 0.9804, 'grad_norm': 9.213237717631273e-06, 'learning_rate': 0.00013630880579010857, 'epoch': 0.65}
+{'loss': 1.01, 'grad_norm': 9.498123290541116e-06, 'learning_rate': 0.00013389626055488539, 'epoch': 0.67}
+{'loss': 1.0147, 'grad_norm': 9.525161658530124e-06, 'learning_rate': 0.00013148371531966226, 'epoch': 0.7}
+{'loss': 0.9793, 'grad_norm': 1.4699918210681062e-05, 'learning_rate': 0.0001290711700844391, 'epoch': 0.72}
+{'loss': 0.964, 'grad_norm': 9.08794390852563e-06, 'learning_rate': 0.00012665862484921594, 'epoch': 0.74}
+{'loss': 0.9999, 'grad_norm': 1.0651071534084622e-05, 'learning_rate': 0.00012424607961399278, 'epoch': 0.77}
+{'loss': 0.9912, 'grad_norm': 1.1301884114800487e-05, 'learning_rate': 0.00012183353437876961, 'epoch': 0.79}
+{'loss': 0.9711, 'grad_norm': 1.1143264600832481e-05, 'learning_rate': 0.00011942098914354644, 'epoch': 0.82}
+{'loss': 1.002, 'grad_norm': 1.0952531738439575e-05, 'learning_rate': 0.00011700844390832328, 'epoch': 0.84}
+{'loss': 0.9547, 'grad_norm': 9.791468983166851e-06, 'learning_rate': 0.00011459589867310012, 'epoch': 0.86}
+{'loss': 0.9863, 'grad_norm': 9.066604434337933e-06, 'learning_rate': 0.00011218335343787695, 'epoch': 0.89}
+{'loss': 0.9831, 'grad_norm': 1.0201058103120886e-05, 'learning_rate': 0.0001097708082026538, 'epoch': 0.91}
+{'loss': 0.9386, 'grad_norm': 1.0472571375430562e-05, 'learning_rate': 0.00010735826296743064, 'epoch': 0.94}
+{'loss': 0.956, 'grad_norm': 9.747594049258623e-06, 'learning_rate': 0.0001049457177322075, 'epoch': 0.96}
+{'loss': 0.9478, 'grad_norm': 1.078629975381773e-05, 'learning_rate': 0.00010253317249698434, 'epoch': 0.98}
+{'loss': 0.9684, 'grad_norm': 1.12193511085934e-05, 'learning_rate': 0.00010012062726176117, 'epoch': 1.01}
+{'loss': 0.9796, 'grad_norm': 9.876025615085382e-06, 'learning_rate': 9.770808202653801e-05, 'epoch': 1.03}
+{'loss': 0.9462, 'grad_norm': 9.752036930876784e-06, 'learning_rate': 9.529553679131485e-05, 'epoch': 1.06}
+{'loss': 0.9323, 'grad_norm': 1.0603689588606358e-05, 'learning_rate': 9.288299155609168e-05, 'epoch': 1.08}
+{'loss': 0.9948, 'grad_norm': 1.0178123375226278e-05, 'learning_rate': 9.047044632086852e-05, 'epoch': 1.1}
+{'loss': 0.9794, 'grad_norm': 1.0275154636474326e-05, 'learning_rate': 8.805790108564535e-05, 'epoch': 1.13}
+{'loss': 0.9577, 'grad_norm': 1.0459360055392608e-05, 'learning_rate': 8.56453558504222e-05, 'epoch': 1.15}
+{'loss': 0.9273, 'grad_norm': 9.776128536032047e-06, 'learning_rate': 8.323281061519905e-05, 'epoch': 1.18}
+{'loss': 0.9377, 'grad_norm': 1.023258391796844e-05, 'learning_rate': 8.082026537997588e-05, 'epoch': 1.2}
+{'loss': 0.9599, 'grad_norm': 1.0211369044554885e-05, 'learning_rate': 7.840772014475272e-05, 'epoch': 1.22}
+{'loss': 0.9226, 'grad_norm': 1.170543964690296e-05, 'learning_rate': 7.599517490952955e-05, 'epoch': 1.25}
+{'loss': 0.943, 'grad_norm': 1.1196744708286133e-05, 'learning_rate': 7.358262967430639e-05, 'epoch': 1.27}
+{'loss': 0.9161, 'grad_norm': 1.1752938007703051e-05, 'learning_rate': 7.117008443908325e-05, 'epoch': 1.3}
+{'loss': 0.929, 'grad_norm': 1.1385968718968797e-05, 'learning_rate': 6.875753920386007e-05, 'epoch': 1.32}
+{'loss': 0.9195, 'grad_norm': 1.0849580576177686e-05, 'learning_rate': 6.634499396863692e-05, 'epoch': 1.34}
+{'loss': 0.9319, 'grad_norm': 1.0569327059783973e-05, 'learning_rate': 6.393244873341375e-05, 'epoch': 1.37}
+{'loss': 0.9119, 'grad_norm': 1.1335261660860851e-05, 'learning_rate': 6.151990349819059e-05, 'epoch': 1.39}
+{'loss': 0.9783, 'grad_norm': 1.0500712050998118e-05, 'learning_rate': 5.910735826296744e-05, 'epoch': 1.42}
+{'loss': 0.9412, 'grad_norm': 1.2642885849345475e-05, 'learning_rate': 5.669481302774427e-05, 'epoch': 1.44}
+{'loss': 0.9441, 'grad_norm': 1.1075743714172859e-05, 'learning_rate': 5.4282267792521115e-05, 'epoch': 1.46}
+{'loss': 0.9071, 'grad_norm': 1.1428546713432297e-05, 'learning_rate': 5.186972255729795e-05, 'epoch': 1.49}
+{'loss': 0.927, 'grad_norm': 1.1184725735802203e-05, 'learning_rate': 4.945717732207479e-05, 'epoch': 1.51}
+{'loss': 0.9424, 'grad_norm': 1.1092945896962192e-05, 'learning_rate': 4.704463208685163e-05, 'epoch': 1.54}
+{'loss': 0.889, 'grad_norm': 1.0167635082325432e-05, 'learning_rate': 4.463208685162847e-05, 'epoch': 1.56}
+{'loss': 0.9532, 'grad_norm': 9.977385161619168e-06, 'learning_rate': 4.2219541616405313e-05, 'epoch': 1.58}
+{'loss': 0.9265, 'grad_norm': 1.0812341315613594e-05, 'learning_rate': 3.980699638118215e-05, 'epoch': 1.61}
+{'loss': 0.9316, 'grad_norm': 1.0997070603480097e-05, 'learning_rate': 3.7394451145958985e-05, 'epoch': 1.63}
+{'loss': 0.9467, 'grad_norm': 1.0585093150439207e-05, 'learning_rate': 3.498190591073583e-05, 'epoch': 1.66}
+{'loss': 0.9488, 'grad_norm': 1.0155760719499085e-05, 'learning_rate': 3.256936067551267e-05, 'epoch': 1.68}
+{'loss': 0.9559, 'grad_norm': 1.175802663055947e-05, 'learning_rate': 3.0156815440289505e-05, 'epoch': 1.7}
+{'loss': 0.9114, 'grad_norm': 1.177989997813711e-05, 'learning_rate': 2.7744270205066347e-05, 'epoch': 1.73}
+{'loss': 0.9051, 'grad_norm': 1.1632429050223436e-05, 'learning_rate': 2.5331724969843186e-05, 'epoch': 1.75}
+{'loss': 0.9286, 'grad_norm': 1.2238328054081649e-05, 'learning_rate': 2.2919179734620025e-05, 'epoch': 1.78}
+{'loss': 0.9056, 'grad_norm': 1.1376687325537205e-05, 'learning_rate': 2.0506634499396864e-05, 'epoch': 1.8}
+{'loss': 0.9287, 'grad_norm': 1.1353004083503038e-05, 'learning_rate': 1.8094089264173706e-05, 'epoch': 1.82}
+{'loss': 0.9382, 'grad_norm': 1.094445997296134e-05, 'learning_rate': 1.5681544028950542e-05, 'epoch': 1.85}
+{'loss': 0.9741, 'grad_norm': 1.1627879757725168e-05, 'learning_rate': 1.3268998793727382e-05, 'epoch': 1.87}
+ 94% 782/834 [1:50:51<07:31,  8.68s/it

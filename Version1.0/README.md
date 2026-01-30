@@ -1,4 +1,4 @@
-# Guardian AI v1 (Fine-Tuned)
+# Elyza-7B_Fine-Tuning(Llama2)
 
 IT法務コンサルタント特化型LLMモデルのリポジトリです。
 ELYZA-japanese-Llama-2-7b-instruct をベースに、計2,819件の高品質なデータセットを用いてファインチューニングを行い、IT実務における法的リスク判定と修正提案能力を強化しました。
@@ -71,11 +71,9 @@ Streamlitアプリによる実際の出力結果です。
 ├── app.py                            # Streamlitアプリケーション本体
 ├── dataset/
 │   └── traindata.jsonl               # 最終学習データ (2,819件)
-├── logs/v1,v2
+├── logs/Version1,2
 │   ├── train_log.txt                 # 学習ログ (Final Loss: 0.3029)
 │   └── inference_log.txt             # ストレステストを含む全推論結果
-├── scripts/
-│   └── data_polisher.py              # データ研磨スクリプト
 ├── train.py                          # Unslothを用いた学習用実行スクリプト
 ├── inference.py                      # 推論検証用スクリプト
 ├── config.json                       # モデル設定ファイル
